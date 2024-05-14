@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="moods">
+        <item>Very Happy</item>
+        <item>Happy</item>
+        <item>Neutral</item>
+        <item>Sad</item>
+        <item>Very Sad</item>
+    </string-array>
+</resources>

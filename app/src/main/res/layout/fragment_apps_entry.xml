@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AppsEntryFragment">
+
+    <LinearLayout
+        android:id="@+id/appInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/app_image_description"
+            android:scaleType="fitCenter"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:textAlignment="gravity"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            tools:text="App Name" />
+
+        <TextView
+            android:id="@+id/appHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:textAlignment="gravity"
+            android:textAppearance="?attr/textAppearanceLabelSmall"
+            tools:text="2hr" />
+
+        <ImageButton
+            android:id="@+id/expandButton"
+            style="?attr/imageButtonStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="?attr/colorSurface"
+            android:contentDescription="@string/expand_list"
+            android:src="@drawable/expand_more"
+            app:tint="?attr/colorOnSurface" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/appDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintTop_toBottomOf="@id/appInfo"
+        tools:layout_editor_absoluteX="178dp"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/detailsVeryHappy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iconVeryHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mood_very_happy"
+                app:srcCompat="@drawable/sentiment_very_satisfied"
+                app:tint="?attr/colorOnSurface" />
+
+            <TextView
+                android:id="@+id/moodVeryHappy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/mood_very_happy"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <TextView
+                android:id="@+id/timeSpentVeryHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelSmall"
+                tools:text="24m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailsHappy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iconHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mood_very_happy"
+                app:srcCompat="@drawable/sentiment_satisfied"
+                app:tint="?attr/colorOnSurface" />
+
+            <TextView
+                android:id="@+id/moodHappy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/mood_happy"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <TextView
+                android:id="@+id/timeSpentHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelSmall"
+                tools:text="24m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailsNeutral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iconNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mood_very_happy"
+                app:srcCompat="@drawable/sentiment_neutral"
+                app:tint="?attr/colorOnSurface" />
+
+            <TextView
+                android:id="@+id/moodNeutral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/mood_neutral"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <TextView
+                android:id="@+id/timeSpentNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelSmall"
+                tools:text="24m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailsSad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iconSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mood_very_happy"
+                app:srcCompat="@drawable/sentiment_dissatisfied"
+                app:tint="?attr/colorOnSurface" />
+
+            <TextView
+                android:id="@+id/moodSad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/mood_sad"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <TextView
+                android:id="@+id/timeSpentSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelSmall"
+                tools:text="24m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailsVerySad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iconVerySad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mood_very_happy"
+                app:srcCompat="@drawable/mood_bad"
+                app:tint="?attr/colorOnSurface" />
+
+            <TextView
+                android:id="@+id/moodVerySad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/mood_very_sad"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <TextView
+                android:id="@+id/timeSpentVerySad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelSmall"
+                tools:text="24m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/iconNoDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/mood_very_happy"
+                app:srcCompat="@drawable/block"
+                app:tint="?attr/colorOnSurface" />
+
+            <TextView
+                android:id="@+id/moodNoDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:text="@string/mood_none"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+            <TextView
+                android:id="@+id/timeSpentNoDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAlignment="gravity"
+                android:textAppearance="?attr/textAppearanceLabelSmall"
+                tools:text="24m" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
